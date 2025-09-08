@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">Thrusday</div>
+    </div> -->
+    <div id="mk">hii! <span style="display: none;">mukul</span></div>
+
+</body>
+<script>
+    let element = document.querySelector('#mk')
+    console.log(element.textContent)
+    console.log(element.innerText)
+    const parent = document.querySelector('.parent') // how to select parent element
+    // console.log(parent);// sara monday tuesday wednesday thrusday
+    // console.log(parent.children); // sara div ar class
+    // console.log(parent.children[1]); //  <div class="day">Tuesday</div>
+    // console.log(parent.children[1].innerHTML);// tuesday
+    // console.log(parent.children[1].innerText); // tuesday
+    // console.log(parent.children[1].textContent);// tuesday
+
+    for(let i=0; i<parent.children.length; i++){
+        // console.log(parent.children[i].innerHTML);// monday tuesday wednesday thrusday
+    }
+
+    parent.children[1].style.color = "orange" // tuesday orange ho jayega
+    // console.log(parent.firstElementChild); // <div class="day">monday</div>
+    // console.log(parent.lastElementChild);//<div class="day">Thrusday</div>
+
+    const dayone = document.querySelector('.day');
+    // console.log(dayone);//<div class="day">monday</div>
+    // console.log(dayone.parentElement); // sara day jo h sb day print hoga
+    // console.log(dayone.nextElementSibling);//  <div class="day">Tuesday</div>
+
+    console.log("NODES : ", parent.childNodes); // 9 child node h yaha jb enter krte h to wo v 1 count hota h 
+</script>
+</html>
